@@ -9,7 +9,7 @@
              Why gstreamer version:
                 1. Many boards don't support opencv for image streaming. I had a rough experience with TI board. 
                 2. Gstreamer is ok for low-level handing.
-                3. Not resource intensive.
+                3. Not as resource intensive as opencv.
              Assumptions:
                 1. The model is already trained, optimized, and possibly quantized.
                 2. The model weights are in an interchangeable format such as ONNX. I have used the ONNX Runtime API, but this can be replaced by TFLite or other frameworks.
@@ -19,6 +19,7 @@
                 1. This is not a full codebase for production use.
                 2. Some logic is simplified for clarity and could be expanded in a larger framework.
                 3. I am not an expert in Gstreamer. I used some codes from my previous codebase.
+                4. Might be overkill for simple image processing tasks.
 */
 
 #include <onnxruntime/core/session/onnxruntime_cxx_api.h> // ONNX Runtime C++ API for neural network inference
